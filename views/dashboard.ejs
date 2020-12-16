@@ -1,0 +1,241 @@
+<%- include("partials/header2")-%>
+<!-- <p class="lead mb-3">Welcome </p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a> -->
+
+
+<div id="box1">
+    <div class="row">
+        <div class="nav1 active col-lg-3 col-sm-3 " id="a"><i class="fas fa-user fa-lg"></i>DOWNLOAD BY USERNAME</div>
+        <div class="nav1 col-lg-3 col-sm-3 " id="b"><i class="fas fa-hashtag fa-lg"></i>DOWNLOAD BY HASHTAG</div>
+        <div class="nav1 col-lg-3 col-sm-3 " id="c"><i class="fas fa-map-marker-alt fa-lg"></i>DOWNLOAD BY LOCATION
+        </div>
+        <div class="nav1 col-lg-3 col-sm-3 " id="d"><i class="fas fa-link fa-lg"></i>DOWNLOAD A POST</div>
+    </div>
+
+    <div class="a2">
+
+
+        <form method="POST" action="/account" id="form1">
+            <div class="row a1 ">
+                <div class="col-lg-0">
+                    <h1 style="color:  rgb(132, 119, 168); margin-top: 26%;">@</h1>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="USERNAME" name="account_name" autocomplete="off" required>
+                    <p class="text"><%= info %></h6>
+                </div>
+                <div class="col-lg-3">
+
+                    <input type="text" placeholder="NUMBER OF POSTS" name="s1" autocomplete="off" required>
+
+
+                </div>
+                <div class="col-lg-3">
+                    <input type="submit" value="Submit">
+
+                </div>
+                <div class="col-lg-2">
+                    <div class="loader" style="text-align: center;">Loading...</div>
+                    <p class="loadertext">Please wait while Loading....</p>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <!--  -->
+    <div class="b2">
+
+        <form method="POST" action="/hashtag" id="form2">
+            <div class="row b1 ">
+                <div class="col-lg-0">
+                    <h1 style="color:  rgb(132, 119, 168); margin-top: 26%;">#</h1>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="HASHTAG" name="hashtag" autocomplete="off" required>
+                    <p class="text" style="margin-left: 0%;"><%= info1 %></h6>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="NUMBER OF POSTS" name="s2" autocomplete="off" required>
+                </div>
+                <div class="col-lg-3">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="col-lg-2">
+                    <div class="loader">Loading...</div>
+                    <p class="loadertext">please wait while Loading</p>
+                </div>
+
+
+            </div>
+        </form>
+
+    </div>
+    <!--  -->
+    <div class="c2">
+        <form method="POST" action="/location" id="form3">
+            <div class="row c1 ">
+                <div class="col-lg-0">
+                    <h1 style="color:  rgb(132, 119, 168); margin-top: 26%;"><i class="fas fa-map-marker-alt fa-lg"></i>
+                    </h1>
+                </div>
+                <div class="col-lg-3">
+
+                    <input type="text" placeholder="ENTER LOCATION" name="location" autocomplete="off" required>
+                    <p class="text"><%= info2 %></h6>
+
+
+                </div>
+                <div class="col-lg-3">
+
+                    <input type="text" placeholder="NUMBER OF POSTS" name="s3" autocomplete="off" required>
+
+
+                </div>
+                <div class="col-lg-3">
+                    <input type="submit" value="submit">
+                </div>
+                <div class="col-lg-2">
+                    <div class="loader">Loading...</div>
+                    <p class="loadertext">please wait while Loading</p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--  -->
+    <div class="d2">
+        <form method="POST" action="/instaPost" id="form4">
+            <div class="row d1 ">
+                <div class="col-lg-0">
+                    <h1 style="color:  rgb(132, 119, 168); margin-top: 26%;"><i class="fas fa-link fa-lg"></i></h1>
+                </div>
+                <div class="col-lg-4">
+
+                    <input type="text" placeholder="POST URL" name="url" autocomplete="off" required>
+                    <p class="text"><%= info3 %></h6>
+
+
+                </div>
+                <div class="col-lg-3">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="col-lg-2">
+                    <div class="loader">Loading...</div>
+                    <p class="loadertext">please wait while Loading</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+<!-- instructions -->
+
+<div id="box1">
+    <div class="row">
+        <div class="nav1 active col-lg-12 col-sm-3 ">HOW TO?
+            <hr class="line">
+        </div>
+
+    </div>
+    <div class="a2">
+        <div class="row a1 ">
+            <div class="mid col-lg-12">
+                <h5><i class="fas fa-user fa-lg"></i>DOWNLOAD BY USERNAME</h5>
+            </div>
+            <div class="col-lg-8" style="text-align: left; margin: 7% auto auto 9%; font-size: 1.09rem;">
+                <ul>
+                    <li>Enter a valid username</li>
+                    <li>Enter the number of posts to be downloaded</li>
+                    <li>Click on submit</li>
+                </ul>
+                <ul>
+                    <h5 style="color: rgb(117, 100, 163);"><b>NOTE:</b></h5>
+
+                    <li>Posts from private account cannot be downloaded</li>
+                    <li>The username entered should have atleast 1 post uploaded</li>
+                    <li>If the account is private or has zero posts or if the account does not exist,then it is an
+                        invalid username</li>
+                    <li>maximum number of posts that can be downloaded is 50</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="b2">
+        <div class="row b1 ">
+            <div class="mid">
+                <h5><i class="fas fa-hashtag fa-lg"></i>DOWNLOAD BY HASHTAG</h5>
+            </div>
+            <div class="col-lg-8" style="text-align: left; margin: 7% auto auto 9%; font-size: 1.09rem;">
+                <ul>
+                    <li>Enter a valid Hashtag</li>
+                    <li>Enter the number of posts to be downloaded</li>
+                    <li>Click on submit</li>
+                </ul>
+                <ul>
+                    <h5 style="color: rgb(117, 100, 163);"><b>NOTE:</b></h5>
+
+                    <li>Posts for the entered hashtag should be available on instagram</li>
+                    <li>If the does not exist,then it is an invalid hastag</li>
+                    <li>maximum number of posts that can be downloaded is 50</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="c2">
+        <div class="row c1 ">
+            <div class="mid">
+                <h5><i class="fas fa-map-marker-alt fa-lg"></i>DOWNLOAD BY LOCATION</h5>
+            </div>
+            <div class="col-lg-8" style="text-align: left; margin: 7% auto auto 9%; font-size: 1.09rem;">
+                <ul>
+                    <li>Search for the location on instagram</li>
+                    <li>Copy the link and paste it above</li>
+                    
+                    <li>Enter the number of posts to be downloaded</li>
+                    <li>Click on submit</li>
+                    <img src="/loc.jpeg" style="width: 650px; margin: 2%;">
+                </ul>
+                <ul>
+                <h5 style="color: rgb(117, 100, 163);"><b>NOTE:</b></h5>
+                
+                    <li>A valid link of the location should be entered</li>
+                    <li>The location entered should have atleadt 1 post uploaded</li>
+                    <li>If the location has no posts uploaded,then it is invalid</li>
+                    <li>maximum number of posts that can be downloaded is 50</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="d2">
+        <div class="row d1 ">
+            <div class="mid">
+                <h5><i class="fas fa-link fa-lg"></i>DOWNLOAD A POST USING IT'S LINK</h5>
+            </div>
+            <div class="col-lg-8" style="text-align: left; margin: 7% auto auto 9%; font-size: 1.09rem;">
+                <ul>
+                    <li>Search for the post you want to download on instagram</li>
+                    <li>Click on options</li>
+                    <li>Click on Copy link and paste it above</li>
+                    <li>Click on submit</li>
+                    <img src="/pic2.jpeg" style="width: 500px; height :500px; margin: 2%;">
+                    <img src="/pic1.jpeg" style="width: 500px; height :500px; margin: 2%;">
+                </ul>
+                <ul>
+                <h5 style="color: rgb(117, 100, 163);"><b>NOTE:</b></h5>
+                
+                    <li>If the link is entered is not correct ,then it is invalid</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer")-%>
